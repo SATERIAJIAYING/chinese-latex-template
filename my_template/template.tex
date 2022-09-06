@@ -3,6 +3,8 @@
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{booktabs}
+\usepackage{listings} %代码框
+\usepackage{xcolor}
 \usepackage{multirow} %和表格有关的两个宏包
 \usepackage[margin=1in]{geometry}%设置边距，符合Word设定
 \usepackage{graphicx}%插入图片
@@ -40,6 +42,31 @@
 	breaklinks=true
 }
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ % 代码框相关配置
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize\ttfamily,        % size of fonts used for the code
+	columns=fullflexible,
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	tabsize=4,
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve}\ttfamily,     % string literal style
+	frame=shadowbox,
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	% identifierstyle=\color{red},
+	numbers=left, 
+	numberstyle=\tiny,
+	% escapeinside=' ',
+	xleftmargin=2em,
+	xrightmargin=2em, 
+	aboveskip=1em
+}
+
 \begin{document}
 
 	\maketitle %有title的页面没有页眉页脚
@@ -54,15 +81,21 @@
 
 	~
 
-	~
-
-	~
-
 	这里填写摘要
 
 	\vspace{7cm} %一般用在调整图片位置时。可以加空行使图片之间错开，或者图片和文字之间
 
 	这里填写摘要这里填写摘要这里填写摘要这里填写摘要
+
+	\begin{lstlisting} [language=c++]
+		int main(int argc, char ** argv) 
+		{ 
+
+			printf("Hello world! \n"); 
+
+			return 0; 
+		} 
+		\end{lstlisting}
 
 	\newpage
 
