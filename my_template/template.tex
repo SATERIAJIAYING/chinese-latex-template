@@ -3,9 +3,10 @@
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{booktabs}
-\usepackage{listings} %代码框
+\usepackage{listings} %和代码框有关的两个宏包
 \usepackage{xcolor}
 \usepackage{multirow} %和表格有关的两个宏包
+\usepackage{background} %和背景有关的宏包
 \usepackage[margin=1in]{geometry}%设置边距，符合Word设定
 \usepackage{graphicx}%插入图片
 \graphicspath{{Figures/}}%文章所用图片在当前目录下的 Figures目录
@@ -66,6 +67,10 @@
 	xrightmargin=2em, 
 	aboveskip=1em
 }
+
+\backgroundsetup{scale=1, angle=0, opacity = 1,
+	contents = {\includegraphics[width=1.25\paperwidth, height=1.2\paperwidth, 
+	keepaspectratio]{Figures/背景.jpg}}}
 
 \begin{document}
 
