@@ -1,4 +1,4 @@
-\documentclass[10pt,aspectratio=43,mathserif]{beamer}		
+\documentclass[10pt,aspectratio=43,mathserif]{beamer}
 %设置为 Beamer 文档类型，设置字体为 10pt，长宽比为16:9，数学字体为 serif 风格
 
 %%%%-----导入宏包-----%%%%
@@ -6,7 +6,9 @@
 \usepackage{xeCJK}
 \usepackage{amsmath,amsfonts,amssymb,bm}
 \usepackage{color}
-\usepackage{graphicx,hyperref,url}	
+\usepackage{graphicx,hyperref,url}
+\usepackage{listings} %和代码框有关的两个宏包
+\usepackage{xcolor}
 %%%%%%%%%%%%%%%%%%
 
 
@@ -61,6 +63,32 @@
 %%%%----日期信息
 
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ % 代码框相关配置
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize\ttfamily,        % size of fonts used for the code
+	columns=fullflexible,
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	tabsize=4,
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve}\ttfamily,     % string literal style
+	frame=shadowbox,
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	% identifierstyle=\color{red},
+	numbers=left, 
+	numberstyle=\tiny,
+	% escapeinside=' ',
+	xleftmargin=2em,
+	xrightmargin=2em, 
+	aboveskip=1em
+}
+%%%%----代码块设计
+
 \begin{document}
 
 \begin{frame}
@@ -77,6 +105,22 @@
 		\end{frame}				%生成提纲页
 
 \section{引言}
+
+        \begin{frame}[fragile]
+            \begin{lstlisting}[language=c++]
+//代码块演示
+if(Terms > 0)
+{
+    for(int i = 0; i < Terms; i++)
+    {
+        b.smArray[i].col = smArray[i].row;
+        b.smArray[i].row = smArray[i].col;
+        b.smArray[i].value = smArray[i].value;
+    }
+}
+
+            \end{lstlisting}
+        \end{frame}
 
 		\begin{frame}
 			\frametitle{\textbf{引言}}
