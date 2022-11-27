@@ -1,0 +1,104 @@
+\documentclass[twocolumn]{ctexart}
+\CTEXsetup[format={\Large\bfseries}]{section}%让section指令左对齐
+\renewcommand{\abstractname}{}%去掉摘要头上的标题
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}%右上角引用文献的命令
+\usepackage[margin=2cm]{geometry}%调整页边距
+\usepackage{pifont}%提供圆圈数字输入
+\usepackage{graphicx}%插入图片
+\usepackage{authblk}%作者、单位
+\usepackage{amsmath, bm}%数学公式宏包
+\usepackage{esint}%使重积分符号更加紧凑，必须加在amsmath后
+\usepackage{amssymb}%特殊数学符号
+\usepackage{caption}%图片标题处理
+\usepackage{float}%处理图表浮动插入
+\usepackage[section]{placeins}%防止图表浮动跨过section
+\usepackage{subfigure}%插入多图时用子图显示的宏包
+\pagestyle{plain}%页码
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+\setCJKmainfont{SimSun}[BoldFont=FandolSong-Bold]
+\renewcommand*{\songti}{\CJKfamily{zhsong}}%定义新宋体命令
+\setlength{\belowcaptionskip}{-2pt}
+\graphicspath{{figures/}}%文章所用图片在当前目录下的 Figures目录
+\begin{document}
+	
+	
+	
+	\zihao{5}%设置全文字号为五号
+	\everymath{\displaystyle}%设置所有数学公式为displaystyle形式
+	\abovedisplayshortskip=5pt%设置数学公式间距
+	\belowdisplayshortskip=5pt
+	\abovedisplayskip=5pt
+	\belowdisplayskip=5pt
+	\lineskiplimit=4pt
+	\lineskip=4pt
+	\title{\vspace{-2cm}{\heiti {\zihao{2}论文标题}} }%标题
+	\date{}%不显示日期
+	\author[1]{\zihao{-4}作者1 , 作者2 , 作者3\vspace{-1.5em}}%作者名称
+	\affil[1]{\vspace{-6em}{{\zihao{6}{\kaishu (单位)}}}}%作者单位
+	\twocolumn[
+	\begin{@twocolumnfalse}
+		\maketitle 
+		\begin{abstract}
+			\newgeometry{left=1.5cm, right=1.5cm}%调整摘要部分的页边距，与正文对齐
+			\noindent{\zihao{-5}{\heiti 摘~~~要 }{\kaishu ~~~这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。这是一段摘要。}}\\
+			\noindent{\zihao{-5}\heiti 关键词 }~~~{\zihao{-5}\kaishu 关键词1~~~~关键词2~~~~关键词3}\\
+			\\
+		\end{abstract}
+	\end{@twocolumnfalse}
+	]%双栏环境下单栏的摘要
+	
+	\section{{\zihao{4}{\songti 第一节}}\vspace{-0.6em}}
+	\subsection{{\songti 第一小节}\vspace{-0.6em}}
+	
+	这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。 这是一段正文。
+	\subsection{{\songti 第二小节}\vspace{-0.6em}}
+	这是一段数学公式
+	\begin{equation}
+		\begin{aligned}
+			p=\frac{L^{2}}{G M m^{2}}, \quad \varepsilon=\sqrt{1+\frac{2 E L^{2}}{G^{2} M^{2} m^{3}}} \\
+		\end{aligned}\tag{1.2.1}
+	\end{equation}
+	\begin{equation}
+	\begin{aligned}
+		\mathrm{~d} \theta=\frac{\mathrm{d} r / r^{2}}{\sqrt{\left(\dfrac{\varepsilon}{p}\right)^{2}-\left(\dfrac{1}{r}-\dfrac{1}{p}\right)^{2}}} .
+	\end{aligned}\tag{1.2.2}
+	\end{equation}
+	\section{{\zihao{4}{\songti 第二节}}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第一小节}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第二小节}\vspace{-0.6em}}
+	
+	\section{{\zihao{4}{\songti 第三节}}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第一小节}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第二小节}\vspace{-0.6em}}
+	
+	\section{{\zihao{4}{\songti 第四节}}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第一小节}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第二小节}\vspace{-0.6em}}
+	
+	\section{{\zihao{4}{\songti 第五节}}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第一小节}\vspace{-0.6em}}
+	
+	\subsection{{\songti 第二小节}\vspace{-0.6em}}
+	
+	%如果你会用BibTeX,请使用生成参考文献列表的命令
+	%\bibliographystyle{unsrt}
+	%\bibliography{ref} 
+	%如果不会用就如下所示手打参考文献
+	\noindent\textbf{\songti {\zihao{-3} 参考文献}}\\%参考文献
+	$\left[1\right]$王跃洲. 基于力学近似模型的大展弦比机翼结构优化设计[D].哈尔滨工业大学,2016.\\
+	$\left[2\right]$朱江辉，王富生，王安强.大展弦比复合材料机翼静气动弹性参数分析［J］.机械设计与制造，2011（2）：186-188.\\
+	$\left[3\right]$戴凯. 基于FLUENT的飞行器气动特性仿真研究[D].西安工业大学,2015.\\
+	$\left[4\right]$黄季墀，汪海.飞机结构设计与强度计算[M].上海：上海交通大学出版社，2012：78-291.\\
+	$\left[5\right]$陈佳,袁朝辉,鹿思嘉.某型飞机机翼弯曲变形的仿真计算[J].机电工程,2013,30(04):422-425.\\
+	$\left[6\right]$王伟,王华,贾清萍.充气机翼承载能力和气动特性分析[J].航空动力学报,2010,25(10):2296-2301.DOI:10.13224/j.cnki.jasp.2010.10.022.\\
+	$\left[7\right]$孙杨,昌敏,白俊强.变形机翼飞行器发展综述[J].无人系统技术,2021,4(03)\\
+	$\left[8\right]$曾攀,石亦平.工程中数值分析的复杂力学建模与高精度方法[J].中国科学基金,2000(02):24-29.DOI:10.16262/j.cnki.1000-8217.2000.02.008.\\
+	$\left[9\right]$陈刚,王校培,宋军,唐军军,沈浩杰.某高载荷大后掠无人机复合材料机翼结构设计与试验验证[J].南京航空航天大学学报,2021,53(04):613-619.DOI:10.16356/j.1005-2615.2021.04.016.
+\end{document}	
